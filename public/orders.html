@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders Management - Dhanusha Laundry Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>DHANUSHA LAUNDRY SERVICE</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a href="orders.html">Orders</a>
+        <a href="payments.html">Payments</a>
+    </nav>
+</header>
+
+<section class="management">
+
+    <h2>Orders Management</h2>
+    <p class="subtitle">Manage customer laundry orders easily.</p>
+
+    <div class="form-container">
+
+        <form id="orderForm">
+
+            <input type="hidden" id="order_id">
+
+            <label>Select Customer</label>
+            <select id="customer_id" required>
+                <option value="">Select Customer</option>
+            </select>
+
+            <label>Select Service</label>
+            <select id="service_id" required>
+                <option value="">Select Service</option>
+            </select>
+
+            <label>Order Date</label>
+            <input type="date" id="order_date" required>
+
+            <label>Delivery Date</label>
+            <input type="date" id="delivery_date" required>
+
+            <label>Total Amount (₹)</label>
+            <input type="number" id="total_amount"
+                   placeholder="Enter total amount"
+                   min="0.01" step="0.01" required>
+
+            <label>Order Status</label>
+            <select id="status" required>
+                <option value="">Select Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Washing">Washing</option>
+                <option value="Ready">Ready</option>
+                <option value="Delivered">Delivered</option>
+            </select>
+
+            <button type="submit" id="orderSubmitBtn">
+                Add Order
+            </button>
+
+            <button type="button" id="orderCancelBtn"
+                    onclick="resetOrderForm()"
+                    style="display:none;">
+                Cancel
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Orders List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Service</th>
+                    <th>Order Date</th>
+                    <th>Delivery Date</th>
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="orderTable">
+            </tbody>
+        </table>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dhanusha Laundry Service Management System</p>
+    <p>Developed by Dhanusha & ChatGPT</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

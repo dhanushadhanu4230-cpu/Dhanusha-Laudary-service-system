@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dhanusha Laundry Service Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-card h3 {
+            margin: 15px 0;
+        }
+
+        .service-card p {
+            padding: 0 15px;
+        }
+
+        .service-card a {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 20px;
+            background: #087e99;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .service-card a:hover {
+            background: #123b55;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #b9828a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .about {
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .services-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff8f0;
+        }
+
+        .services-section h2,
+        .about h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>DHANUSHA LAUNDRY SERVICE</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="customers.html">Customers</a>
+            <a href="services.html">Services</a>
+            <a href="orders.html">Orders</a>
+            <a href="payments.html">Payments</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME SECTION -->
+
+    <section class="hero">
+
+        <h2>DHANUSHA LAUNDRY SERVICE MANAGEMENT SYSTEM</h2>
+
+        <p>Your Clothes, Our Care!</p>
+
+        <a href="services.html">Explore Services</a>
+
+        <a href="orders.html">Book Your Order</a>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about">
+
+        <h2>About Our Laundry Service</h2>
+
+        <p>
+            Welcome to Dhanusha Laundry Service Management System.
+            We provide quality laundry services to make your life easier.
+            Our services include washing, ironing and dry cleaning.
+            We take care of your clothes with love and care.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+
+    <section class="services-section">
+
+        <h2>Our Laundry Services</h2>
+
+        <p>We provide the best care for your clothes.</p>
+
+        <div class="service-cards">
+
+            <!-- WASHING -->
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=800&q=85"
+                    alt="Washing clothes"
+                    onerror="this.src='https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=800&q=85'">
+
+                <h3>Washing</h3>
+
+                <p>
+                    Professional washing service to keep your clothes
+                    fresh, clean and beautiful.
+                </p>
+
+                <a href="orders.html">Book Now</a>
+
+            </div>
+
+
+            <!-- IRONING -->
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=800&q=85"
+                    alt="Ironing clothes">
+
+                <h3>Ironing</h3>
+
+                <p>
+                    Get wrinkle-free clothes with our professional
+                    ironing service.
+                </p>
+
+                <a href="orders.html">Book Now</a>
+
+            </div>
+
+
+            <!-- DRY CLEANING -->
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=800&q=85"
+                    alt="Dry cleaning clothes">
+
+                <h3>Dry Cleaning</h3>
+
+                <p>
+                    Special care for delicate and expensive clothes
+                    with our dry cleaning service.
+                </p>
+
+                <a href="orders.html">Book Now</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Dhanusha Laundry Service Management System</p>
+
+        <p>Developed by Dhanusha & ChatGPT</p>
+
+    </footer>
+
+</body>
+
+</html>

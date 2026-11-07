@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management - Dhanusha Laundry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🧺 DHANUSHA LAUNDRY</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a href="orders.html">Orders</a>
+        <a href="payments.html">Payments</a>
+    </nav>
+</header>
+
+<section class="management">
+
+    <h1>Customer Management</h1>
+
+    <p class="subtitle">
+        Manage your laundry customers easily.
+    </p>
+
+    <div class="form-container">
+
+        <h2>Add Customer Details</h2>
+
+        <form id="customerForm">
+
+            <input type="hidden" id="customer_id">
+
+            <label>Customer Name</label>
+            <input type="text" id="name" placeholder="Enter customer name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email address">
+
+            <label>Address</label>
+            <textarea id="address" placeholder="Enter customer address"></textarea>
+
+            <button type="submit" id="submitBtn">Add Customer</button>
+
+            <button type="button" id="cancelBtn" onclick="resetForm()" style="display:none;">
+                Cancel Edit
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Customer Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="customerTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dhanusha Laundry Service Management System</p>
+    <p>Developed by Dhanusha & ChatGPT</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

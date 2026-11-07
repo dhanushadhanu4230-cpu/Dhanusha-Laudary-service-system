@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payments Management - Dhanusha Laundry Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>DHANUSHA LAUNDRY SERVICE</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a href="orders.html">Orders</a>
+        <a href="payments.html">Payments</a>
+    </nav>
+</header>
+
+<section class="management">
+
+    <h2>Payments Management</h2>
+    <p class="subtitle">Manage customer payments easily.</p>
+
+    <div class="form-container">
+
+        <form id="paymentForm">
+
+            <input type="hidden" id="payment_id">
+
+            <label>Select Order</label>
+            <select id="order_id" required>
+                <option value="">Select Order</option>
+            </select>
+
+            <label>Payment Amount (₹)</label>
+            <input type="number" id="amount"
+                   placeholder="Enter payment amount"
+                   min="0.01" step="0.01" required>
+
+            <label>Payment Date</label>
+            <input type="date" id="payment_date" required>
+
+            <label>Payment Method</label>
+            <select id="payment_method" required>
+                <option value="">Select Payment Method</option>
+                <option value="Cash">Cash</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Card</option>
+                <option value="Online">Online</option>
+            </select>
+
+            <label>Payment Status</label>
+            <select id="payment_status" required>
+                <option value="">Select Payment Status</option>
+                <option value="Paid">Paid</option>
+                <option value="Pending">Pending</option>
+            </select>
+
+            <button type="submit" id="paymentSubmitBtn">
+                Add Payment
+            </button>
+
+            <button type="button" id="paymentCancelBtn"
+                    onclick="resetPaymentForm()"
+                    style="display:none;">
+                Cancel
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Payments List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Order ID</th>
+                    <th>Amount</th>
+                    <th>Payment Date</th>
+                    <th>Payment Method</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="paymentTable">
+            </tbody>
+        </table>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dhanusha Laundry Service Management System</p>
+    <p>Developed by Dhanusha & ChatGPT</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

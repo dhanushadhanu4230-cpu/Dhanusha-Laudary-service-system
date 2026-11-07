@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f8fb;
+    color: #263746;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    background-color: #123b55;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #63d5e8;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 550px;
+    background:
+        linear-gradient(rgba(5, 35, 55, 0.65),
+        rgba(5, 35, 55, 0.65)),
+        url("https://images.unsplash.com/photo-1604335399105-5b4d0f9e7c4c?w=1600")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    color: #65d9ec;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background-color: #16a6c2;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    margin: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #08758c;
+    transform: translateY(-3px);
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.about h2 {
+    font-size: 30px;
+    color: #123b55;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+    color: #555;
+}
+
+/* SERVICES SECTION */
+
+.services-preview {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.services-preview h2 {
+    color: #123b55;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #087e99;
+    font-size: 23px;
+    margin: 18px 0 10px;
+}
+
+.card p {
+    color: #555;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #123b55;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content h2 {
+        font-size: 23px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* CUSTOMER MANAGEMENT PAGE */
+
+.management {
+    padding: 45px 7%;
+    min-height: 75vh;
+}
+
+.management h1 {
+    text-align: center;
+    color: #123b55;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-container,
+.table-container {
+    background: white;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    max-width: 1100px;
+}
+
+.form-container h2,
+.table-container h2 {
+    color: #087e99;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin: 12px 0 7px;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-container textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.form-container button {
+    background: #087e99;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #123b55;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #123b55;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f1f7fa;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.edit-btn {
+    background: #e69b27;
+}
+
+.delete-btn {
+    background: #d94343;
+}
+/* SERVICES MANAGEMENT PAGE */
+
+#serviceForm input,
+#serviceForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#serviceForm label {
+    display: block;
+    margin: 12px 0 7px;
+    font-weight: bold;
+}
+
+#serviceForm button {
+    background: #087e99;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#serviceForm button:hover {
+    background: #123b55;
+}
+/* ORDERS MANAGEMENT PAGE */
+
+#orderForm input,
+#orderForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#orderForm label {
+    display: block;
+    margin: 12px 0 7px;
+    font-weight: bold;
+}
+
+#orderForm button {
+    background: #087e99;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#orderForm button:hover {
+    background: #123b55;
+}
+/* PAYMENTS MANAGEMENT PAGE */
+
+#paymentForm input,
+#paymentForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#paymentForm label {
+    display: block;
+    margin: 12px 0 7px;
+    font-weight: bold;
+}
+
+#paymentForm button {
+    background: #087e99;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#paymentForm button:hover {
+    background: #123b55;
+}
